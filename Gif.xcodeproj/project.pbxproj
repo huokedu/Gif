@@ -13,8 +13,6 @@
 		8DBA841D1D381A5700BBD657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA841B1D381A5700BBD657 /* LaunchScreen.storyboard */; };
 		8DE5B7D21D3FD40C0064C71C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE5B7D11D3FD40C0064C71C /* Main.storyboard */; };
 		8DE5B7D51D4001E10064C71C /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE5B7D41D4001E10064C71C /* RealmHelper.swift */; };
-		8DE5B7D91D40043C0064C71C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE5B7D71D40043C0064C71C /* Realm.framework */; };
-		8DE5B7DA1D40043C0064C71C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE5B7D81D40043C0064C71C /* RealmSwift.framework */; };
 		8DE5B7DF1D400A4F0064C71C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE5B7DE1D400A4F0064C71C /* Video.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +25,6 @@
 		8DBA841E1D381A5700BBD657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DE5B7D11D3FD40C0064C71C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8DE5B7D41D4001E10064C71C /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
-		8DE5B7D71D40043C0064C71C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Frameworks/Realm.framework; sourceTree = "<group>"; };
-		8DE5B7D81D40043C0064C71C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Frameworks/RealmSwift.framework; sourceTree = "<group>"; };
 		8DE5B7DE1D400A4F0064C71C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,8 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DE5B7DA1D40043C0064C71C /* RealmSwift.framework in Frameworks */,
-				8DE5B7D91D40043C0064C71C /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +58,6 @@
 		8DBA84111D381A5700BBD657 /* Gif */ = {
 			isa = PBXGroup;
 			children = (
-				8DE5B7D71D40043C0064C71C /* Realm.framework */,
-				8DE5B7D81D40043C0064C71C /* RealmSwift.framework */,
 				8DE5B7D31D4001CB0064C71C /* Helpers */,
 				8DBA84121D381A5700BBD657 /* AppDelegate.swift */,
 				8DBA84141D381A5700BBD657 /* ViewController.swift */,

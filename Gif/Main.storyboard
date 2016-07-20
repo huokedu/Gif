@@ -85,12 +85,16 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vm3-l3-CCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="1098"/>
+            <point key="canvasLocation" x="1399" y="1188"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="olb-rk-87w">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="LwP-gj-WLD" sceneMemberID="viewController"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="LwP-gj-WLD" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="ryp-hI-EpT" kind="show" identifier="showVideo" id="xTR-jK-h61"/>
+                    </connections>
+                </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWx-8R-3GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730" y="403"/>
@@ -114,4 +118,7 @@
             <point key="canvasLocation" x="399" y="403"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xTR-jK-h61"/>
+    </inferredMetricsTieBreakers>
 </document>
