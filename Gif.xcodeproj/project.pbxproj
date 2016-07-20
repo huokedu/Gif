@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		8DBA84131D381A5700BBD657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA84121D381A5700BBD657 /* AppDelegate.swift */; };
 		8DBA84151D381A5700BBD657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA84141D381A5700BBD657 /* ViewController.swift */; };
-		8DBA84181D381A5700BBD657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA84161D381A5700BBD657 /* Main.storyboard */; };
 		8DBA841A1D381A5700BBD657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA84191D381A5700BBD657 /* Assets.xcassets */; };
 		8DBA841D1D381A5700BBD657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA841B1D381A5700BBD657 /* LaunchScreen.storyboard */; };
+		8DE5B7D21D3FD40C0064C71C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE5B7D11D3FD40C0064C71C /* Main.storyboard */; };
+		8DE5B7D51D4001E10064C71C /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE5B7D41D4001E10064C71C /* RealmHelper.swift */; };
+		8DE5B7D91D40043C0064C71C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE5B7D71D40043C0064C71C /* Realm.framework */; };
+		8DE5B7DA1D40043C0064C71C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE5B7D81D40043C0064C71C /* RealmSwift.framework */; };
+		8DE5B7DF1D400A4F0064C71C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE5B7DE1D400A4F0064C71C /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8DBA840F1D381A5700BBD657 /* Gif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBA84121D381A5700BBD657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DBA84141D381A5700BBD657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8DBA84171D381A5700BBD657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DBA84191D381A5700BBD657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DBA841C1D381A5700BBD657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DBA841E1D381A5700BBD657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DE5B7D11D3FD40C0064C71C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8DE5B7D41D4001E10064C71C /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		8DE5B7D71D40043C0064C71C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Frameworks/Realm.framework; sourceTree = "<group>"; };
+		8DE5B7D81D40043C0064C71C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Frameworks/RealmSwift.framework; sourceTree = "<group>"; };
+		8DE5B7DE1D400A4F0064C71C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE5B7DA1D40043C0064C71C /* RealmSwift.framework in Frameworks */,
+				8DE5B7D91D40043C0064C71C /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +64,34 @@
 		8DBA84111D381A5700BBD657 /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				8DE5B7D71D40043C0064C71C /* Realm.framework */,
+				8DE5B7D81D40043C0064C71C /* RealmSwift.framework */,
+				8DE5B7D31D4001CB0064C71C /* Helpers */,
 				8DBA84121D381A5700BBD657 /* AppDelegate.swift */,
 				8DBA84141D381A5700BBD657 /* ViewController.swift */,
-				8DBA84161D381A5700BBD657 /* Main.storyboard */,
+				8DE5B7DB1D400A360064C71C /* Models */,
+				8DE5B7D11D3FD40C0064C71C /* Main.storyboard */,
 				8DBA84191D381A5700BBD657 /* Assets.xcassets */,
 				8DBA841B1D381A5700BBD657 /* LaunchScreen.storyboard */,
 				8DBA841E1D381A5700BBD657 /* Info.plist */,
 			);
 			path = Gif;
+			sourceTree = "<group>";
+		};
+		8DE5B7D31D4001CB0064C71C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8DE5B7D41D4001E10064C71C /* RealmHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8DE5B7DB1D400A360064C71C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DE5B7DE1D400A4F0064C71C /* Video.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +153,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE5B7D21D3FD40C0064C71C /* Main.storyboard in Resources */,
 				8DBA841D1D381A5700BBD657 /* LaunchScreen.storyboard in Resources */,
 				8DBA841A1D381A5700BBD657 /* Assets.xcassets in Resources */,
-				8DBA84181D381A5700BBD657 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBA84151D381A5700BBD657 /* ViewController.swift in Sources */,
+				8DE5B7DF1D400A4F0064C71C /* Video.swift in Sources */,
+				8DE5B7D51D4001E10064C71C /* RealmHelper.swift in Sources */,
 				8DBA84131D381A5700BBD657 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +176,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8DBA84161D381A5700BBD657 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8DBA84171D381A5700BBD657 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8DBA841B1D381A5700BBD657 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -252,6 +276,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Gif/Frameworks",
+				);
 				INFOPLIST_FILE = Gif/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.Gif;
@@ -266,6 +294,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Gif/Frameworks",
+				);
 				INFOPLIST_FILE = Gif/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.Gif;
@@ -293,6 +325,7 @@
 				8DBA84231D381A5700BBD657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

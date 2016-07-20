@@ -9,8 +9,17 @@
 import UIKit
 import AVFoundation
 import AVKit
+import RealmSwift
+
 
 class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate{
+    
+    var video: Results<Video>! {
+        didSet {
+            //tableView.reloadData() //tells the table view to reload all of its data whenever our notes property is changed
+        }
+    }
+
     
     @IBOutlet weak var cameraButton:UIButton!
     
@@ -65,6 +74,7 @@ class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //video = RealmHelper.retrieveVideos() //wants to update the notes property every time the ListNotesViewController is loaded
         
         //swiping to the left 
         let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.swipe(_:)))
@@ -145,10 +155,9 @@ class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate{
         dispatch_after(delayInNanoSeconds, dispatch_get_main_queue(), {
             print("10 seconds passed")
             captureOutput.stopRecording()
-            self.cameraButton.backgroundColor = UIColor.whiteColor()
-
-            
+        
         })
+        //self.cameraButton.backgroundColor = UIColor.whiteColor()
     }
     
     // MARK: - Segue methods
@@ -196,5 +205,6 @@ class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate{
     //swipe to new view controller
     func swipe(recognizer: UISwipeGestureRecognizer) {
         self.performSegueWithIdentifier("showVideos", sender: self)
+        //self.performSegueWithIdentifier("videoList", sender: self)
     }
 }
