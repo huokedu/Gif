@@ -13,4 +13,5 @@ class Video: Object {
     dynamic var title = ""
     dynamic var content = ""
     dynamic var modificationTime = NSDate()
+
 }

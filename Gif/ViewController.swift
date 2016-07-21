@@ -74,7 +74,7 @@ class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //video = RealmHelper.retrieveVideos() //wants to update the notes property every time the ListNotesViewController is loaded
+        video = RealmHelper.retrieveVideo() //wants to update the notes property every time the ListNotesViewController is loaded
         
         //swiping to the left 
         let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.swipe(_:)))

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Wd-Pm-VZF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Wd-Pm-VZF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -90,14 +90,23 @@
         <!--AV Player View Controller-->
         <scene sceneID="olb-rk-87w">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="LwP-gj-WLD" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="ryp-hI-EpT" kind="show" identifier="showVideo" id="xTR-jK-h61"/>
-                    </connections>
-                </avPlayerViewController>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="LwP-gj-WLD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWx-8R-3GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730" y="403"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SEZ-ue-ihJ">
+            <objects>
+                <viewController id="j60-OC-T3T" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ffi-O0-RuF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RgO-T0-NWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371" y="404"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WDq-8M-cva">
@@ -118,7 +127,4 @@
             <point key="canvasLocation" x="399" y="403"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="xTR-jK-h61"/>
-    </inferredMetricsTieBreakers>
 </document>
