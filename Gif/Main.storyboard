@@ -14,10 +14,10 @@
                         <viewControllerLayoutGuide type="bottom" id="J5p-zT-g5Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S3G-dL-Mdq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQU-E9-vvA">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQU-E9-vvA">
                                 <rect key="frame" x="260" y="493" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.78693781910000005" green="1" blue="0.97337815750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -28,12 +28,13 @@
                                     <action selector="capture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gv5-0w-YIf"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWs-vc-pZC">
+                                <rect key="frame" x="65" y="113" width="498" height="257"/>
+                                <color key="backgroundColor" red="0.78693781910000005" green="1" blue="0.97337815750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.78693781910000005" green="1" blue="0.97337815750000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="LQU-E9-vvA" firstAttribute="centerX" secondItem="S3G-dL-Mdq" secondAttribute="centerX" id="Obd-Md-cWV"/>
-                            <constraint firstItem="J5p-zT-g5Q" firstAttribute="top" secondItem="LQU-E9-vvA" secondAttribute="bottom" constant="27" id="ZQ1-nO-NZ9"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8f9-yt-xcT">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="JMy-MK-Jh5">
@@ -47,9 +48,11 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cameraButton" destination="LQU-E9-vvA" id="7i7-aC-cZn"/>
                         <outlet property="frontCamera" destination="Q5e-b9-GAR" id="QWX-o9-thj"/>
+                        <outlet property="previewView" destination="XWs-vc-pZC" id="lLK-OK-Tgf"/>
                         <segue destination="ryp-hI-EpT" kind="show" identifier="showVideos" id="I18-nc-2Oj"/>
                         <segue destination="LwP-gj-WLD" kind="show" identifier="playVideo" id="je1-zh-1WL"/>
                     </connections>
@@ -63,15 +66,15 @@
             <objects>
                 <tableViewController id="ryp-hI-EpT" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wka-NI-bAS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JZd-zb-d1o">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JZd-zb-d1o" id="1li-n4-Jgo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -85,28 +88,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vm3-l3-CCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399" y="1188"/>
+            <point key="canvasLocation" x="1051" y="1107"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="olb-rk-87w">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="LwP-gj-WLD" sceneMemberID="viewController"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="LwP-gj-WLD" customClass="EditVideoViewController" customModule="Gif" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ftz-Le-6fi"/>
+                        <viewControllerLayoutGuide type="bottom" id="1EZ-YK-Eli"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dm9-RR-N0k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWx-8R-3GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730" y="403"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="SEZ-ue-ihJ">
-            <objects>
-                <viewController id="j60-OC-T3T" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ffi-O0-RuF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RgO-T0-NWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2371" y="404"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WDq-8M-cva">

@@ -19,20 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SCRecorder.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0EB839EDCBB35F0DEF71A7941B071F65</key>
+		<key>1B3C8EE9F4503888880473F3485EEAD4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>16A08BDCE0D65C16CCF8E776A92D93D3</key>
+		<key>CE21800453A09DE9385192CBFC65CCFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE0B4E28848DCEC6458CE44A0359D9E8</key>
+		<key>DCF1B4AEFF3FD45EE632CAEC1A7749CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F210ABED68160F8351F70607436A02D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

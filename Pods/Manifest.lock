@@ -4,14 +4,17 @@ PODS:
   - Realm/Headers (0.98.6)
   - RealmSwift (0.98.6):
     - Realm (= 0.98.6)
+  - SCRecorder (2.7.0)
 
 DEPENDENCIES:
   - RealmSwift
+  - SCRecorder
 
 SPEC CHECKSUMS:
   Realm: 44803f35418c5d89b27825a564247fcd190de37e
   RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
+  SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
 
-PODFILE CHECKSUM: e28bb06eb46829159d313cf4e965a08c331c5640
+PODFILE CHECKSUM: 261fb2c9b600e61723040e46f8d7cab2536a8401
 
 COCOAPODS: 1.0.1

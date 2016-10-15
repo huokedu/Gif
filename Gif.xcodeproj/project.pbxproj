@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		507F6F48322937BA654B7972 /* Pods_Gif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE4A61AEE8EEF045979E86B /* Pods_Gif.framework */; };
+		8D0FE52E1D41243100BD9042 /* EditVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0FE52D1D41243100BD9042 /* EditVideoViewController.swift */; };
+		8D0FE5301D4125BB00BD9042 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0FE52F1D4125BB00BD9042 /* AVFoundation.framework */; };
+		8D0FE5321D41274700BD9042 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0FE5311D41274700BD9042 /* AVKit.framework */; };
 		8DBA84131D381A5700BBD657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA84121D381A5700BBD657 /* AppDelegate.swift */; };
 		8DBA84151D381A5700BBD657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA84141D381A5700BBD657 /* ViewController.swift */; };
 		8DBA841A1D381A5700BBD657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA84191D381A5700BBD657 /* Assets.xcassets */; };
@@ -19,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		4883F19745F07D1805E45513 /* Pods-Gif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gif.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gif/Pods-Gif.debug.xcconfig"; sourceTree = "<group>"; };
+		8D0FE52D1D41243100BD9042 /* EditVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditVideoViewController.swift; sourceTree = "<group>"; };
+		8D0FE52F1D4125BB00BD9042 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8D0FE5311D41274700BD9042 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		8D0FE5331D425B7100BD9042 /* Gif-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gif-Bridging-Header.h"; sourceTree = "<group>"; };
 		8DBA840F1D381A5700BBD657 /* Gif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBA84121D381A5700BBD657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DBA84141D381A5700BBD657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0FE5321D41274700BD9042 /* AVKit.framework in Frameworks */,
+				8D0FE5301D4125BB00BD9042 /* AVFoundation.framework in Frameworks */,
 				507F6F48322937BA654B7972 /* Pods_Gif.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +65,8 @@
 		40F6E05D534981914810C275 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D0FE5311D41274700BD9042 /* AVKit.framework */,
+				8D0FE52F1D4125BB00BD9042 /* AVFoundation.framework */,
 				FCE4A61AEE8EEF045979E86B /* Pods_Gif.framework */,
 			);
 			name = Frameworks;
@@ -87,9 +98,11 @@
 				8DBA84141D381A5700BBD657 /* ViewController.swift */,
 				8DE5B7DB1D400A360064C71C /* Models */,
 				8DE5B7D11D3FD40C0064C71C /* Main.storyboard */,
+				8D0FE52D1D41243100BD9042 /* EditVideoViewController.swift */,
 				8DBA84191D381A5700BBD657 /* Assets.xcassets */,
 				8DBA841B1D381A5700BBD657 /* LaunchScreen.storyboard */,
 				8DBA841E1D381A5700BBD657 /* Info.plist */,
+				8D0FE5331D425B7100BD9042 /* Gif-Bridging-Header.h */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -233,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0FE52E1D41243100BD9042 /* EditVideoViewController.swift in Sources */,
 				8DBA84151D381A5700BBD657 /* ViewController.swift in Sources */,
 				8DE5B7DF1D400A4F0064C71C /* Video.swift in Sources */,
 				8DE5B7D51D4001E10064C71C /* RealmHelper.swift in Sources */,
@@ -342,6 +356,7 @@
 			baseConfigurationReference = 4883F19745F07D1805E45513 /* Pods-Gif.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -354,6 +369,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.Gif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gif/Gif-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -362,6 +379,7 @@
 			baseConfigurationReference = FEC96232BC4F33B7F8D32D2D /* Pods-Gif.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -374,6 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.Gif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gif/Gif-Bridging-Header.h";
 			};
 			name = Release;
 		};
