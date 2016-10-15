@@ -3,7 +3,7 @@
 //  Gif
 //
 //  Created by Liya Wu-17 on 7/14/16.
-//  Copyright © 2016 ms. All rights reserved.
+//  Copyright © 2016 ms. All rights reserved
 //
 
 import UIKit
